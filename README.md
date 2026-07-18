@@ -2,23 +2,27 @@
 
 ## Overview
 
-This project provides the initial development environment and modular architecture for an AI-powered recruitment platform. It follows a microservices-inspired structure, making the system scalable, maintainable, and easy to extend.
+This repository contains the initial development environment and modular project structure for an AI-based recruitment platform. The project is organized to support scalable development using independent modules for parsing, scoring, screening, interviews, utilities, testing, and documentation.
+
+> **Note:** This repository contains only the development environment, project structure, and placeholder modules. It does not include any confidential business logic, proprietary algorithms, or internal project documentation.
+
+---
 
 ## Project Structure
 
 ```
 zecpath-ai-system/
 │
-├── ats_engine/        # ATS scoring module
-├── data/              # Data storage
-├── docs/              # Project documentation
-├── interview_ai/      # Interview intelligence
-├── logs/              # Application logs
-├── parsers/           # Resume parser
-├── scoring/           # Final scoring engine
-├── screening_ai/      # Candidate screening
-├── tests/             # Unit tests
-├── utils/             # Utility modules
+├── ats_engine/
+├── data/
+├── docs/
+├── interview_ai/
+├── logs/
+├── parsers/
+├── scoring/
+├── screening_ai/
+├── tests/
+├── utils/
 │
 ├── main.py
 ├── requirements.txt
@@ -26,41 +30,52 @@ zecpath-ai-system/
 └── .gitignore
 ```
 
+---
+
 ## Technologies Used
 
 - Python
+- Git
+- Virtual Environment (venv)
 - FastAPI
 - Flask
 - Pandas
 - NumPy
 - Scikit-learn
-- Git
-- Visual Studio Code
+- Pytest
 
-## Installation
+---
+
+## Setup Instructions
+
+### Create Virtual Environment
 
 ```bash
-git clone <repository-url>
-
-cd zecpath-ai-system
-
 python -m venv .venv
+```
 
+### Activate Environment (Windows)
+
+```bash
 .\.venv\Scripts\activate
+```
 
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-## Run
+---
 
-```bash
-python main.py
-```
+## Project Status
+
+Initial project environment and repository setup completed.
+
+---
 
 ## Author
 
-Assna V S
+**Assna V S**
 
 Data Science Engineer (Intern)
-
-Zecser Business LLP

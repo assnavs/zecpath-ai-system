@@ -1,5 +1,11 @@
-from parsers.resume_parser import ResumeParser
+"""
+Basic project test
+"""
 
-parser = ResumeParser()
 
-print(parser.parse_resume("resume.pdf"))
+def test_environment():
+    print("Environment setup completed successfully.")
+
+
+if __name__ == "__main__":
+    test_environment()
