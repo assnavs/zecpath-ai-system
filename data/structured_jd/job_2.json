@@ -1,0 +1,19 @@
+{
+    "job_title": "Software Engineer",
+    "company": "NimbusStack Technologies",
+    "location": "Boston, MA",
+    "experience": "3+ years",
+    "education": "Bachelor's or Master's degree in Computer Science or equivalent experience",
+    "skills": [
+        "Python",
+        "Java",
+        "JavaScript",
+        "AWS",
+        "Azure"
+    ],
+    "responsibilities": [
+        "Write clean, maintainable, well",
+        "tested code\nParticipate in code reviews and mentor junior engineers\nTroubleshoot and resolve production issues\nCollaborate with product and design teams on new features\nContribute to architecture and technical decision",
+        "making"
+    ]
+}

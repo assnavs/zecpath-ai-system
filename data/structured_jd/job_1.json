@@ -1,0 +1,17 @@
+{
+    "job_title": "Data Analyst",
+    "company": "BrightPath Analytics",
+    "location": "New York, NY (Hybrid)",
+    "experience": "2+ years",
+    "education": "Bachelor's degree in Data Science, Statistics, Computer Science, or related field",
+    "skills": [
+        "Python",
+        "SQL",
+        "Excel",
+        "Power BI",
+        "Tableau"
+    ],
+    "responsibilities": [
+        "Collect, clean, and validate data from multiple sources (SQL, Excel, Access)\nBuild and maintain dashboards and reports for stakeholders\nPerform statistical analysis to identify trends and anomalies\nPresent findings to senior management in clear, actionable formats\nSupport monthly/quarterly audit and compliance reporting"
+    ]
+}

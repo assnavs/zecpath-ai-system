@@ -1,0 +1,16 @@
+{
+    "job_title": "Web Developer",
+    "company": "Coastal Digital Solutions",
+    "location": "San Diego, CA",
+    "experience": "3+ years",
+    "education": "Bachelor's degree in Computer Science or related field",
+    "skills": [
+        "SQL",
+        "Java"
+    ],
+    "responsibilities": [
+        "Develop, test, and deploy front",
+        "end and back",
+        "end web features\nWrite and optimize SQL queries and stored procedures\nTroubleshoot and resolve application issues\nTranslate client requirements into technical designs\nStay current with emerging web technologies and standards"
+    ]
+}
