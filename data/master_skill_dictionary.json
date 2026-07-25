@@ -1,0 +1,95 @@
+{
+  "technical": {
+    "Python": {
+      "synonyms": ["Py", "Python3"],
+      "variations": ["python", "python3"],
+      "category": "Programming"
+    },
+    "SQL": {
+      "synonyms": ["MySQL", "PostgreSQL", "SQL Server"],
+      "variations": ["sql", "mysql", "postgresql", "sql server"],
+      "category": "Database"
+    },
+    "Excel": {
+      "synonyms": ["MS Excel", "Microsoft Excel"],
+      "variations": ["excel", "microsoft excel"],
+      "category": "Spreadsheet"
+    },
+    "Power BI": {
+      "synonyms": ["PowerBI"],
+      "variations": ["power bi", "powerbi"],
+      "category": "BI Tool"
+    },
+    "Tableau": {
+      "synonyms": ["Tableau Desktop"],
+      "variations": ["tableau", "tableau desktop"],
+      "category": "BI Tool"
+    },
+    "JavaScript": {
+      "synonyms": ["JS", "Javascript"],
+      "variations": ["javascript", "js"],
+      "category": "Programming"
+    },
+    "React": {
+      "synonyms": [],
+      "variations": ["react", "reactjs"],
+      "category": "Frontend"
+    },
+    "Node.js": {
+      "synonyms": ["Node"],
+      "variations": ["node", "nodejs", "node.js"],
+      "category": "Backend"
+    },
+    "MongoDB": {
+      "synonyms": [],
+      "variations": ["mongodb", "mongo db"],
+      "category": "Database"
+    }
+  },
+
+  "business": {
+    "Communication": {
+      "synonyms": [],
+      "variations": ["communication", "verbal communication"],
+      "category": "Soft Skill"
+    },
+    "Leadership": {
+      "synonyms": [],
+      "variations": ["leadership", "team leadership"],
+      "category": "Soft Skill"
+    },
+    "Problem Solving": {
+      "synonyms": [],
+      "variations": ["problem solving", "problem-solving"],
+      "category": "Soft Skill"
+    }
+  },
+
+  "creative": {
+    "Canva": {
+      "synonyms": [],
+      "variations": ["canva"],
+      "category": "Design"
+    },
+    "Figma": {
+      "synonyms": [],
+      "variations": ["figma"],
+      "category": "Design"
+    }
+  },
+
+  "skill_stacks": {
+    "MERN": [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js"
+    ],
+    "MEAN": [
+      "MongoDB",
+      "Express.js",
+      "Angular",
+      "Node.js"
+    ]
+  }
+}
