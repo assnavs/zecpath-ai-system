@@ -1,0 +1,27 @@
+{
+    "Data Analyst": [
+        "Business Analyst",
+        "MIS Analyst",
+        "Reporting Analyst"
+    ],
+    "Software Engineer": [
+        "Software Developer",
+        "Backend Developer",
+        "Frontend Developer",
+        "Full Stack Developer"
+    ],
+    "Data Scientist": [
+        "ML Engineer",
+        "AI Engineer",
+        "Research Scientist"
+    ],
+    "HR Coordinator": [
+        "HR Executive",
+        "Talent Acquisition Executive"
+    ],
+    "Digital Marketing Manager": [
+        "SEO Specialist",
+        "Marketing Executive",
+        "Performance Marketing Executive"
+    ]
+}
