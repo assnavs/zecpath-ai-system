@@ -1,0 +1,42 @@
+{
+    "Google Data Analytics": {
+        "issuer": "Google",
+        "category": "Data Analytics"
+    },
+    "Google Professional Data Engineer": {
+        "issuer": "Google",
+        "category": "Cloud"
+    },
+    "AWS Cloud Practitioner": {
+        "issuer": "AWS",
+        "category": "Cloud Computing"
+    },
+    "AWS Solutions Architect": {
+        "issuer": "AWS",
+        "category": "Cloud Computing"
+    },
+    "Microsoft Azure AI Engineer": {
+        "issuer": "Microsoft",
+        "category": "Artificial Intelligence"
+    },
+    "Microsoft Azure Fundamentals": {
+        "issuer": "Microsoft",
+        "category": "Cloud Computing"
+    },
+    "Cisco CCNA": {
+        "issuer": "Cisco",
+        "category": "Networking"
+    },
+    "Certified Ethical Hacker": {
+        "issuer": "EC-Council",
+        "category": "Cyber Security"
+    },
+    "TensorFlow Developer": {
+        "issuer": "Google",
+        "category": "Machine Learning"
+    },
+    "IBM Data Science Professional Certificate": {
+        "issuer": "IBM",
+        "category": "Data Science"
+    }
+}

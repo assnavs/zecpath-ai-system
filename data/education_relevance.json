@@ -1,0 +1,17 @@
+{
+    "MCA": "Computer Science",
+    "BCA": "Computer Science",
+    "M.Tech": "Engineering",
+    "B.Tech": "Engineering",
+    "M.E": "Engineering",
+    "B.E": "Engineering",
+    "MBA": "Management",
+    "BBA": "Management",
+    "M.Sc": "Science",
+    "B.Sc": "Science",
+    "M.Com": "Commerce",
+    "B.Com": "Commerce",
+    "MA": "Arts",
+    "BA": "Arts",
+    "PhD": "Research"
+}

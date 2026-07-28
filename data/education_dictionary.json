@@ -1,0 +1,37 @@
+{
+    "Bachelor of Technology": "B.Tech",
+    "Bachelor of Engineering": "B.E",
+    "Bachelor of Computer Applications": "BCA",
+    "Bachelor of Science": "B.Sc",
+    "Bachelor of Commerce": "B.Com",
+    "Bachelor of Arts": "BA",
+    "Bachelor of Business Administration": "BBA",
+
+    "Master of Technology": "M.Tech",
+    "Master of Engineering": "M.E",
+    "Master of Computer Applications": "MCA",
+    "Master of Science": "M.Sc",
+    "Master of Commerce": "M.Com",
+    "Master of Arts": "MA",
+    "Master of Business Administration": "MBA",
+
+    "Doctor of Philosophy": "PhD",
+
+    "B.Tech": "B.Tech",
+    "B.E": "B.E",
+    "BCA": "BCA",
+    "B.Sc": "B.Sc",
+    "B.Com": "B.Com",
+    "BA": "BA",
+    "BBA": "BBA",
+
+    "M.Tech": "M.Tech",
+    "M.E": "M.E",
+    "MCA": "MCA",
+    "M.Sc": "M.Sc",
+    "M.Com": "M.Com",
+    "MA": "MA",
+    "MBA": "MBA",
+
+    "PhD": "PhD"
+}
