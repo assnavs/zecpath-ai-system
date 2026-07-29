@@ -1,0 +1,27 @@
+{
+    "excellent_match": {
+        "min_score": 90,
+        "max_score": 100,
+        "label": "Excellent Match"
+    },
+    "strong_match": {
+        "min_score": 80,
+        "max_score": 89,
+        "label": "Strong Match"
+    },
+    "good_match": {
+        "min_score": 70,
+        "max_score": 79,
+        "label": "Good Match"
+    },
+    "average_match": {
+        "min_score": 60,
+        "max_score": 69,
+        "label": "Average Match"
+    },
+    "weak_match": {
+        "min_score": 0,
+        "max_score": 59,
+        "label": "Weak Match"
+    }
+}
