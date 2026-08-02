@@ -1,0 +1,23 @@
+{
+    "score_range": {
+        "minimum": 0,
+        "maximum": 100
+    },
+    "keyword_score_cap": 85,
+    "personal_attributes_to_mask": [
+        "name",
+        "email",
+        "phone",
+        "address",
+        "date_of_birth",
+        "dob",
+        "gender",
+        "marital_status",
+        "nationality",
+        "religion"
+    ],
+    "bias_thresholds": {
+        "high_keyword_dependency": 0.60,
+        "low_semantic_contribution": 0.15
+    }
+}
