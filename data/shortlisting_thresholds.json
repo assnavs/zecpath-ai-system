@@ -1,0 +1,5 @@
+{
+    "shortlist_threshold": 80,
+    "review_threshold": 60,
+    "top_candidate_limit": 5
+}
