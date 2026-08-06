@@ -1,35 +1,58 @@
 """
 PDF Resume Reader
 
-This module extracts text from PDF resume files using PyMuPDF.
+Optimized PDF text extraction using PyMuPDF.
+
+Day 18 improvements:
+- Efficient page-wise extraction
+- Reduced repeated string allocation
+- Context-managed document handling
+- Safe empty-page handling
 """
 
-import fitz  # PyMuPDF
+import fitz
+
+from utils.logger import logger
 
 
 def extract_pdf_text(pdf_path):
     """
-    Extract text from a PDF file.
+    Extract text from a PDF resume efficiently.
 
     Args:
-        pdf_path (str): Path to the PDF file.
+        pdf_path (str): Path to PDF file.
 
     Returns:
-        str: Extracted text.
+        str: Extracted resume text.
     """
 
-    extracted_text = ""
+    if not pdf_path:
+        return ""
 
     try:
-        document = fitz.open(pdf_path)
+        text_parts = []
 
-        for page in document:
-            extracted_text += page.get_text()
+        with fitz.open(pdf_path) as document:
 
-        document.close()
+            for page in document:
+
+                page_text = page.get_text("text")
+
+                if page_text:
+                    text_parts.append(page_text)
+
+        extracted_text = "".join(text_parts)
+
+        logger.info(
+            "PDF extraction completed successfully."
+        )
 
         return extracted_text
 
-    except Exception as e:
-        print(f"Error reading PDF: {e}")
+    except Exception as error:
+
+        logger.error(
+            f"PDF extraction failed: {error}"
+        )
+
         return ""
