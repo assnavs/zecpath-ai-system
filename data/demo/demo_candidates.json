@@ -1,0 +1,62 @@
+{
+  "demo_job": {
+    "job_role": "Data Scientist",
+    "job_description": {
+      "skills": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Pandas",
+        "Scikit-learn"
+      ],
+      "experience": "Experience in data analysis, machine learning, predictive modeling and working with structured datasets.",
+      "education": "Degree in Computer Science, Data Science, Information Technology or related field.",
+      "projects": "Machine learning, analytics or data-driven application projects."
+    }
+  },
+  "candidates": [
+    {
+      "candidate_id": "DEMO001",
+      "name": "Candidate A",
+      "profile_type": "Strong Match",
+      "skills": [
+        "Python",
+        "SQL",
+        "Machine Learning",
+        "Pandas",
+        "Scikit-learn"
+      ],
+      "experience": "2 years of experience in data analysis and machine learning with Python and SQL.",
+      "education": "MCA with specialization in Data Science",
+      "projects": "Developed machine learning models for prediction and analytics applications."
+    },
+    {
+      "candidate_id": "DEMO002",
+      "name": "Candidate B",
+      "profile_type": "Moderate Match",
+      "skills": [
+        "Python",
+        "SQL",
+        "Pandas",
+        "Excel"
+      ],
+      "experience": "Worked on data analysis, reporting and dashboard projects.",
+      "education": "Bachelor degree in Computer Applications",
+      "projects": "Created data analysis and visualization projects using Python."
+    },
+    {
+      "candidate_id": "DEMO003",
+      "name": "Candidate C",
+      "profile_type": "Low Match",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React"
+      ],
+      "experience": "Experience developing responsive frontend web applications.",
+      "education": "Bachelor degree in Computer Applications",
+      "projects": "Developed frontend websites and user interface projects."
+    }
+  ]
+}
