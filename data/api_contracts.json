@@ -1,0 +1,48 @@
+{
+    "api_version": "v1",
+    "base_path": "/api/v1",
+    "endpoints": {
+        "resume_upload": {
+            "method": "POST",
+            "path": "/resumes/upload",
+            "description": "Upload a candidate resume for processing"
+        },
+        "resume_parse": {
+            "method": "POST",
+            "path": "/resumes/parse",
+            "description": "Parse structured information from resume text"
+        },
+        "candidate_scoring": {
+            "method": "POST",
+            "path": "/scoring",
+            "description": "Generate ATS score for a candidate"
+        },
+        "candidate_shortlisting": {
+            "method": "POST",
+            "path": "/shortlisting",
+            "description": "Rank and shortlist candidates"
+        },
+        "job_status": {
+            "method": "GET",
+            "path": "/jobs/{job_id}",
+            "description": "Retrieve asynchronous job status"
+        },
+        "health_check": {
+            "method": "GET",
+            "path": "/health",
+            "description": "Check ATS API availability"
+        }
+    },
+    "job_statuses": [
+        "QUEUED",
+        "PROCESSING",
+        "COMPLETED",
+        "FAILED"
+    ],
+    "error_codes": {
+        "INVALID_REQUEST": 400,
+        "RESOURCE_NOT_FOUND": 404,
+        "VALIDATION_ERROR": 422,
+        "INTERNAL_ERROR": 500
+    }
+}
