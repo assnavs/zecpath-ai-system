@@ -1,0 +1,172 @@
+{
+    "test_cases": [
+        {
+            "case_id": "TC001",
+            "category": "Tech Role",
+            "profile_level": "Experienced",
+            "job_role": "Data Scientist",
+            "candidate": "Tech Candidate A",
+            "scores": {
+                "skill_match": 92,
+                "experience_relevance": 88,
+                "education_alignment": 85,
+                "semantic_similarity": 90
+            },
+            "manual_decision": "SELECT"
+        },
+        {
+            "case_id": "TC002",
+            "category": "Tech Role",
+            "profile_level": "Experienced",
+            "job_role": "Backend Developer",
+            "candidate": "Tech Candidate B",
+            "scores": {
+                "skill_match": 86,
+                "experience_relevance": 82,
+                "education_alignment": 75,
+                "semantic_similarity": 84
+            },
+            "manual_decision": "SELECT"
+        },
+        {
+            "case_id": "TC003",
+            "category": "Tech Role",
+            "profile_level": "Experienced",
+            "job_role": "Frontend Developer",
+            "candidate": "Tech Candidate C",
+            "scores": {
+                "skill_match": 52,
+                "experience_relevance": 48,
+                "education_alignment": 60,
+                "semantic_similarity": 50
+            },
+            "manual_decision": "REJECT"
+        },
+        {
+            "case_id": "TC004",
+            "category": "Non-Tech Role",
+            "profile_level": "Experienced",
+            "job_role": "Business Analyst",
+            "candidate": "Non-Tech Candidate A",
+            "scores": {
+                "skill_match": 88,
+                "experience_relevance": 84,
+                "education_alignment": 80,
+                "semantic_similarity": 86
+            },
+            "manual_decision": "SELECT"
+        },
+        {
+            "case_id": "TC005",
+            "category": "Non-Tech Role",
+            "profile_level": "Experienced",
+            "job_role": "Business Analyst",
+            "candidate": "Non-Tech Candidate B",
+            "scores": {
+                "skill_match": 48,
+                "experience_relevance": 45,
+                "education_alignment": 65,
+                "semantic_similarity": 50
+            },
+            "manual_decision": "REJECT"
+        },
+        {
+            "case_id": "TC006",
+            "category": "Fresher Resume",
+            "profile_level": "Fresher",
+            "job_role": "Data Scientist",
+            "candidate": "Fresher Candidate A",
+            "scores": {
+                "skill_match": 82,
+                "experience_relevance": 45,
+                "education_alignment": 88,
+                "semantic_similarity": 80
+            },
+            "manual_decision": "SELECT"
+        },
+        {
+            "case_id": "TC007",
+            "category": "Fresher Resume",
+            "profile_level": "Fresher",
+            "job_role": "Frontend Developer",
+            "candidate": "Fresher Candidate B",
+            "scores": {
+                "skill_match": 72,
+                "experience_relevance": 38,
+                "education_alignment": 80,
+                "semantic_similarity": 70
+            },
+            "manual_decision": "REJECT"
+        },
+        {
+            "case_id": "TC008",
+            "category": "Fresher Resume",
+            "profile_level": "Fresher",
+            "job_role": "Backend Developer",
+            "candidate": "Fresher Candidate C",
+            "scores": {
+                "skill_match": 88,
+                "experience_relevance": 50,
+                "education_alignment": 85,
+                "semantic_similarity": 84
+            },
+            "manual_decision": "SELECT"
+        },
+        {
+            "case_id": "TC009",
+            "category": "Senior Profile",
+            "profile_level": "Senior",
+            "job_role": "Data Scientist",
+            "candidate": "Senior Candidate A",
+            "scores": {
+                "skill_match": 94,
+                "experience_relevance": 96,
+                "education_alignment": 82,
+                "semantic_similarity": 93
+            },
+            "manual_decision": "SELECT"
+        },
+        {
+            "case_id": "TC010",
+            "category": "Senior Profile",
+            "profile_level": "Senior",
+            "job_role": "Backend Developer",
+            "candidate": "Senior Candidate B",
+            "scores": {
+                "skill_match": 90,
+                "experience_relevance": 95,
+                "education_alignment": 78,
+                "semantic_similarity": 91
+            },
+            "manual_decision": "SELECT"
+        },
+        {
+            "case_id": "TC011",
+            "category": "Senior Profile",
+            "profile_level": "Senior",
+            "job_role": "Frontend Developer",
+            "candidate": "Senior Candidate C",
+            "scores": {
+                "skill_match": 58,
+                "experience_relevance": 88,
+                "education_alignment": 75,
+                "semantic_similarity": 62
+            },
+            "manual_decision": "REJECT"
+        },
+        {
+            "case_id": "TC012",
+            "category": "Non-Tech Role",
+            "profile_level": "Fresher",
+            "job_role": "Business Analyst",
+            "candidate": "Non-Tech Fresher",
+            "scores": {
+                "skill_match": 78,
+                "experience_relevance": 40,
+                "education_alignment": 85,
+                "semantic_similarity": 76
+            },
+            "manual_decision": "SELECT"
+        }
+    ]
+}
