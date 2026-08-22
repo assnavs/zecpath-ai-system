@@ -1,0 +1,199 @@
+﻿{
+  "dataset_name": "HR Screening Question Dataset",
+  "version": "1.0",
+  "purpose": "AI-ready question bank for automated HR screening calls",
+  "supported_languages": [
+    "English",
+    "Future multilingual expansion supported"
+  ],
+  "question_categories": [
+    "Introduction",
+    "Education",
+    "Experience",
+    "Skills",
+    "Location",
+    "Salary",
+    "Notice Period"
+  ],
+  "answer_types": [
+    "text",
+    "number",
+    "multiple_choice"
+  ],
+  "roles": {
+    "Data Scientist": [
+      {
+        "question_id": "DS_INT_001",
+        "category": "Introduction",
+        "question": "Please introduce yourself and briefly describe your professional background.",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 1
+      },
+      {
+        "question_id": "DS_EDU_001",
+        "category": "Education",
+        "question": "What is your highest educational qualification and field of study?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "DS_EXP_001",
+        "category": "Experience",
+        "question": "How many years of experience do you have in data science or related roles?",
+        "expected_answer_type": "number",
+        "mandatory": true,
+        "scoring_importance": 3
+      },
+      {
+        "question_id": "DS_SKL_001",
+        "category": "Skills",
+        "question": "Which programming and data science technologies are you most experienced with?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 3
+      },
+      {
+        "question_id": "DS_LOC_001",
+        "category": "Location",
+        "question": "Are you comfortable working from the required job location or work arrangement?",
+        "expected_answer_type": "multiple_choice",
+        "mandatory": true,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "DS_SAL_001",
+        "category": "Salary",
+        "question": "What are your current and expected salary ranges?",
+        "expected_answer_type": "text",
+        "mandatory": false,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "DS_NOT_001",
+        "category": "Notice Period",
+        "question": "What is your current notice period and when can you join?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 2
+      }
+    ],
+    "Data Analyst": [
+      {
+        "question_id": "DA_INT_001",
+        "category": "Introduction",
+        "question": "Please introduce yourself and summarize your professional background.",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 1
+      },
+      {
+        "question_id": "DA_EDU_001",
+        "category": "Education",
+        "question": "What is your highest educational qualification?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "DA_EXP_001",
+        "category": "Experience",
+        "question": "How many years of experience do you have in data analysis or related work?",
+        "expected_answer_type": "number",
+        "mandatory": true,
+        "scoring_importance": 3
+      },
+      {
+        "question_id": "DA_SKL_001",
+        "category": "Skills",
+        "question": "Which tools and technologies do you use for data analysis and visualization?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 3
+      },
+      {
+        "question_id": "DA_LOC_001",
+        "category": "Location",
+        "question": "Are you comfortable with the required work location or work arrangement?",
+        "expected_answer_type": "multiple_choice",
+        "mandatory": true,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "DA_SAL_001",
+        "category": "Salary",
+        "question": "What are your salary expectations for this role?",
+        "expected_answer_type": "text",
+        "mandatory": false,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "DA_NOT_001",
+        "category": "Notice Period",
+        "question": "What is your notice period and earliest possible joining date?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 2
+      }
+    ],
+    "Software Engineer": [
+      {
+        "question_id": "SE_INT_001",
+        "category": "Introduction",
+        "question": "Please introduce yourself and describe your software development background.",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 1
+      },
+      {
+        "question_id": "SE_EDU_001",
+        "category": "Education",
+        "question": "What is your highest educational qualification and specialization?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "SE_EXP_001",
+        "category": "Experience",
+        "question": "How many years of software development experience do you have?",
+        "expected_answer_type": "number",
+        "mandatory": true,
+        "scoring_importance": 3
+      },
+      {
+        "question_id": "SE_SKL_001",
+        "category": "Skills",
+        "question": "Which programming languages, frameworks, and development tools are you experienced with?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 3
+      },
+      {
+        "question_id": "SE_LOC_001",
+        "category": "Location",
+        "question": "Are you comfortable with the required work location or work arrangement?",
+        "expected_answer_type": "multiple_choice",
+        "mandatory": true,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "SE_SAL_001",
+        "category": "Salary",
+        "question": "What are your current and expected salary ranges?",
+        "expected_answer_type": "text",
+        "mandatory": false,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "SE_NOT_001",
+        "category": "Notice Period",
+        "question": "What is your notice period and when would you be available to join?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 2
+      }
+    ]
+  }
+}
