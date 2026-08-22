@@ -1,0 +1,49 @@
+﻿{
+    "schema_name": "voice_transcript",
+    "schema_version": "1.0",
+    "description": "Structured schema for AI-processable voice screening transcripts.",
+    "required_metadata": [
+        "candidate_id",
+        "job_id",
+        "question_id",
+        "timestamp",
+        "confidence_level"
+    ],
+    "fields": {
+        "candidate_id": {
+            "type": "string",
+            "required": true
+        },
+        "job_id": {
+            "type": "string",
+            "required": true
+        },
+        "question_id": {
+            "type": "string",
+            "required": true
+        },
+        "timestamp": {
+            "type": "string",
+            "format": "ISO-8601",
+            "required": true
+        },
+        "confidence_level": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "required": true
+        },
+        "speaker": {
+            "type": "string",
+            "allowed_values": [
+                "candidate",
+                "interviewer"
+            ],
+            "required": true
+        },
+        "text": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

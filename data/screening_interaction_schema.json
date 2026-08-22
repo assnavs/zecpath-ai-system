@@ -1,0 +1,30 @@
+﻿{
+    "schema_name": "screening_interaction",
+    "schema_version": "1.0",
+    "description": "Structured representation of AI screening interactions.",
+    "required_fields": [
+        "candidate_id",
+        "job_id",
+        "question_id",
+        "timestamp",
+        "confidence_level",
+        "speaker",
+        "text"
+    ],
+    "normalization_rules": {
+        "trim_whitespace": true,
+        "collapse_repeated_spaces": true,
+        "normalize_line_breaks": true,
+        "preserve_original_meaning": true,
+        "lowercase_for_matching_only": true
+    },
+    "interaction_fields": {
+        "candidate_id": "string",
+        "job_id": "string",
+        "question_id": "string",
+        "timestamp": "ISO-8601 datetime",
+        "confidence_level": "0.0 to 1.0",
+        "speaker": "candidate or interviewer",
+        "text": "normalized transcript text"
+    }
+}
