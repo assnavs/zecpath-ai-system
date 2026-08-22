@@ -1,0 +1,61 @@
+﻿{
+    "Data Scientist": {
+        "minimum_ats_score": 70,
+        "review_minimum_score": 55,
+        "mandatory_skills": [
+            "Python",
+            "SQL"
+        ],
+        "experience_range": {
+            "minimum_years": 0,
+            "maximum_years": 10
+        },
+        "location_constraints": [],
+        "availability_constraints": []
+    },
+
+    "Backend Developer": {
+        "minimum_ats_score": 70,
+        "review_minimum_score": 55,
+        "mandatory_skills": [
+            "Python",
+            "SQL"
+        ],
+        "experience_range": {
+            "minimum_years": 0,
+            "maximum_years": 10
+        },
+        "location_constraints": [],
+        "availability_constraints": []
+    },
+
+    "Frontend Developer": {
+        "minimum_ats_score": 70,
+        "review_minimum_score": 55,
+        "mandatory_skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "experience_range": {
+            "minimum_years": 0,
+            "maximum_years": 10
+        },
+        "location_constraints": [],
+        "availability_constraints": []
+    },
+
+    "Business Analyst": {
+        "minimum_ats_score": 70,
+        "review_minimum_score": 55,
+        "mandatory_skills": [
+            "SQL"
+        ],
+        "experience_range": {
+            "minimum_years": 0,
+            "maximum_years": 10
+        },
+        "location_constraints": [],
+        "availability_constraints": []
+    }
+}
