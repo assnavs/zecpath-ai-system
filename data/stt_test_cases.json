@@ -1,0 +1,48 @@
+﻿{
+    "test_suite": "Day 24 Speech-to-Text Integration and Cleaning",
+    "description": "Representative cases for transcript cleaning and STT handling.",
+    "cases": [
+        {
+            "case_id": "STT001",
+            "condition": "Normal speech",
+            "input": "I have two years of experience in Python",
+            "expected_status": "complete"
+        },
+        {
+            "case_id": "STT002",
+            "condition": "Filler words",
+            "input": "Um, I basically have experience in Python",
+            "expected_cleaning": "I have experience in Python."
+        },
+        {
+            "case_id": "STT003",
+            "condition": "Noisy spacing",
+            "input": "I   have    experience   in   SQL",
+            "expected_cleaning": "I have experience in SQL."
+        },
+        {
+            "case_id": "STT004",
+            "condition": "Interrupted speech",
+            "input": "I worked on machine learning [interrupted]",
+            "expected_status": "interrupted"
+        },
+        {
+            "case_id": "STT005",
+            "condition": "Partial answer",
+            "input": "I have worked with Python and SQL",
+            "expected_status": "partial"
+        },
+        {
+            "case_id": "STT006",
+            "condition": "Silence",
+            "input": "[silence]",
+            "expected_status": "silence"
+        },
+        {
+            "case_id": "STT007",
+            "condition": "Punctuation",
+            "input": "I have experience in Python and SQL",
+            "expected_cleaning": "I have experience in Python and SQL."
+        }
+    ]
+}
