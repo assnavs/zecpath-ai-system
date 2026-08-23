@@ -1,0 +1,56 @@
+﻿{
+  "intents": {
+    "skills": [
+      "skill",
+      "skills",
+      "technology",
+      "technologies",
+      "programming",
+      "tools",
+      "python",
+      "sql",
+      "java",
+      "javascript",
+      "machine learning",
+      "data analysis"
+    ],
+    "experience": [
+      "experience",
+      "worked",
+      "working",
+      "years",
+      "previous job",
+      "previous role",
+      "professional experience",
+      "internship"
+    ],
+    "availability": [
+      "available",
+      "availability",
+      "joining",
+      "join",
+      "start",
+      "starting",
+      "immediately",
+      "notice period"
+    ],
+    "salary_expectation": [
+      "salary",
+      "expected salary",
+      "salary expectation",
+      "expected pay",
+      "compensation",
+      "package",
+      "ctc",
+      "lpa"
+    ]
+  },
+  "off_topic_keywords": [
+    "weather",
+    "movie",
+    "cricket",
+    "football",
+    "recipe",
+    "politics"
+  ]
+}
