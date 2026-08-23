@@ -1,0 +1,62 @@
+﻿{
+    "conversation_states": {
+        "start": {
+            "description": "Initial state before the screening question is presented.",
+            "next_state": "asking"
+        },
+        "asking": {
+            "description": "AI asks the candidate the current screening question.",
+            "next_state": "listening"
+        },
+        "listening": {
+            "description": "AI waits for and receives the candidate response.",
+            "next_state": "evaluating"
+        },
+        "evaluating": {
+            "description": "Candidate response is analyzed for intent, relevance, completeness, and communication signals.",
+            "next_state": "decision"
+        },
+        "decision": {
+            "description": "The conversation engine decides whether to accept the answer, retry, clarify, or continue.",
+            "next_state": "completed"
+        },
+        "completed": {
+            "description": "Screening conversation has completed successfully.",
+            "next_state": null
+        }
+    },
+    "response_rules": {
+        "silence": {
+            "action": "retry",
+            "message": "I didn't receive a response. Could you please answer the question?"
+        },
+        "missing_or_vague": {
+            "action": "clarify",
+            "message": "Could you please provide a little more detail?"
+        },
+        "off_topic": {
+            "action": "redirect",
+            "message": "Let's stay focused on the current screening question."
+        },
+        "unknown": {
+            "action": "clarify",
+            "message": "Could you please clarify your answer?"
+        },
+        "understood": {
+            "action": "continue",
+            "message": ""
+        },
+        "interrupted": {
+            "action": "retry",
+            "message": "It looks like your response was interrupted. Please continue your answer."
+        }
+    },
+    "retry_policy": {
+        "maximum_retries": 2,
+        "retry_actions": [
+            "repeat_question",
+            "clarify_question"
+        ],
+        "after_maximum_retries": "continue_with_available_information"
+    }
+}
