@@ -1,0 +1,59 @@
+﻿{
+    "score_range": {
+        "minimum": 0,
+        "maximum": 100
+    },
+    "weights": {
+        "hesitation": 0.20,
+        "response_length": 0.15,
+        "pace": 0.15,
+        "sentiment": 0.15,
+        "uncertainty": 0.20,
+        "consistency": 0.15
+    },
+    "thresholds": {
+        "strong": 75,
+        "moderate": 50
+    },
+    "hesitation_terms": [
+        "um",
+        "uh",
+        "er",
+        "ah",
+        "hmm",
+        "you know",
+        "let me think",
+        "i mean"
+    ],
+    "uncertainty_terms": [
+        "maybe",
+        "perhaps",
+        "i think",
+        "i guess",
+        "not sure",
+        "probably",
+        "might be",
+        "i don't know"
+    ],
+    "positive_terms": [
+        "confident",
+        "successfully",
+        "achieved",
+        "improved",
+        "excellent",
+        "strong",
+        "enjoy",
+        "comfortable",
+        "experienced"
+    ],
+    "negative_terms": [
+        "difficult",
+        "problem",
+        "failed",
+        "failure",
+        "weak",
+        "worried",
+        "confused",
+        "unable"
+    ]
+}
