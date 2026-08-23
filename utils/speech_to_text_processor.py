@@ -1,17 +1,19 @@
-﻿"""
-Day 24 - Speech-to-Text Integration and Cleaning
-
-Provider-independent speech-to-text processing layer.
-The module accepts raw STT output and converts it into
-clean, structured transcript data.
-"""
-
-import re
+﻿import re
 from typing import Any, Dict, Optional
 
 
 class SpeechToTextProcessor:
-    """Process raw speech-to-text output for AI analysis."""
+    """
+    Process raw speech-to-text output for AI analysis.
+
+    Supports normal responses as well as Day 31 edge cases:
+    - poor audio
+    - language issue
+    - background noise
+    - interrupted speech
+    - partial response
+    - silence
+    """
 
     FILLER_WORDS = {
         "um",
@@ -42,46 +44,54 @@ class SpeechToTextProcessor:
         "[inaudible]"
     }
 
+    EDGE_CASE_STATUSES = {
+        "complete",
+        "interrupted",
+        "partial",
+        "silence",
+        "poor_audio",
+        "language_issue",
+        "background_noise"
+    }
+
     def __init__(self):
         self.last_status = "ready"
 
-    def process(self, raw_text: Optional[str], status: str = "complete") -> Dict[str, Any]:
-        """
-        Process raw STT output.
-
-        Supported statuses:
-        - complete
-        - interrupted
-        - partial
-        - silence
-        """
+    def process(
+        self,
+        raw_text: Optional[str],
+        status: str = "complete"
+    ) -> Dict[str, Any]:
 
         if raw_text is None:
             raw_text = ""
 
         if not isinstance(raw_text, str):
-            raise TypeError("STT output must be a string or None.")
+            raise TypeError(
+                "STT output must be a string or None."
+            )
 
-        normalized_status = status.strip().lower()
+        normalized_status = (
+            str(status).strip().lower()
+        )
 
-        if normalized_status not in {
-            "complete",
-            "interrupted",
-            "partial",
-            "silence"
-        }:
+        if normalized_status not in self.EDGE_CASE_STATUSES:
             raise ValueError(
-                "Status must be complete, interrupted, partial, or silence."
+                "Unsupported STT status."
             )
 
         if self.is_silence(raw_text):
             self.last_status = "silence"
+
             return {
                 "text": "",
                 "status": "silence",
                 "is_partial": False,
                 "is_interrupted": False,
-                "is_silence": True
+                "is_silence": True,
+                "requires_retry": True,
+                "requires_clarification": False,
+                "is_edge_case": True
             }
 
         cleaned = self.clean_text(raw_text)
@@ -96,6 +106,12 @@ class SpeechToTextProcessor:
         if is_interrupted:
             normalized_status = "interrupted"
 
+        edge_case = normalized_status in {
+            "poor_audio",
+            "language_issue",
+            "background_noise"
+        }
+
         self.last_status = normalized_status
 
         return {
@@ -103,151 +119,81 @@ class SpeechToTextProcessor:
             "status": normalized_status,
             "is_partial": is_partial,
             "is_interrupted": is_interrupted,
-            "is_silence": False
+            "is_silence": False,
+            "requires_retry": edge_case or is_interrupted,
+            "requires_clarification": (
+                normalized_status == "language_issue"
+            ),
+            "is_edge_case": edge_case
         }
 
     def clean_text(self, text: str) -> str:
-        """Clean transcript text while preserving its meaning."""
 
-        text = self._normalize_whitespace(text)
-        text = self._remove_interruption_markers(text)
-        text = self._remove_filler_words(text)
-        text = self._normalize_whitespace(text)
-        text = self._normalize_case(text)
-        text = self._correct_punctuation(text)
+        if not isinstance(text, str):
+            raise TypeError(
+                "Text must be a string."
+            )
 
-        return text.strip()
+        text = text.strip()
 
-    @staticmethod
-    def _normalize_whitespace(text: str) -> str:
-        text = text.replace("\r\n", " ")
-        text = text.replace("\r", " ")
-        text = text.replace("\n", " ")
-        return re.sub(r"\s+", " ", text).strip()
-
-    def _remove_filler_words(self, text: str) -> str:
-        """Remove conversational filler words and nearby punctuation."""
-
-        multi_word_fillers = [
-            "you know",
-            "sort of",
-            "kind of"
-        ]
-
-        for filler in multi_word_fillers:
+        for filler in sorted(
+            self.FILLER_WORDS,
+            key=len,
+            reverse=True
+        ):
             text = re.sub(
-                rf"\b{re.escape(filler)}\b[,;:]?",
-                " ",
+                rf"\b{re.escape(filler)}\b[,\s]*",
+                "",
                 text,
                 flags=re.IGNORECASE
             )
 
-        single_word_fillers = [
-            "um",
-            "uh",
-            "er",
-            "ah",
-            "hmm",
-            "like",
-            "actually",
-            "basically"
-        ]
-
-        for filler in single_word_fillers:
+        for marker in self.INTERRUPTION_MARKERS:
             text = re.sub(
-                rf"\b{re.escape(filler)}\b[,;:]?",
-                " ",
-                text,
-                flags=re.IGNORECASE
-            )
-
-        # Remove punctuation accidentally left at the beginning.
-        text = re.sub(r"^\s*[,;:]+\s*", "", text)
-
-        # Normalize whitespace after removal.
-        return re.sub(r"\s+", " ", text).strip()
-
-    @staticmethod
-    def _remove_interruption_markers(text: str) -> str:
-        result = text
-
-        markers = [
-            "[interrupted]",
-            "[interruption]",
-            "(interrupted)",
-            "[cut off]"
-        ]
-
-        for marker in markers:
-            result = re.sub(
                 re.escape(marker),
-                " ",
-                result,
+                "",
+                text,
                 flags=re.IGNORECASE
             )
 
-        return result
-
-    @staticmethod
-    def _normalize_case(text: str) -> str:
-        """
-        Normalize transcript case while preserving technical terms.
-
-        Fully uppercase words are normalized unless they are known
-        technical terms or abbreviations.
-        """
+        text = re.sub(
+            r"\s+",
+            " ",
+            text
+        ).strip()
 
         if not text:
-            return text
-
-        technical_terms = {
-            "SQL",
-            "Python",
-            "Java",
-            "JavaScript",
-            "TypeScript",
-            "C++",
-            "C#",
-            "HTML",
-            "CSS",
-            "API",
-            "AI",
-            "ML",
-            "NLP",
-            "AWS",
-            "Azure",
-            "GCP",
-            "Power BI",
-            "Excel",
-            "MySQL",
-            "PostgreSQL",
-            "MongoDB",
-            "Docker",
-            "Kubernetes",
-            "Git",
-            "GitHub"
-        }
-
-        for term in sorted(technical_terms, key=len, reverse=True):
-            text = re.sub(
-                rf"\\b{re.escape(term)}\\b",
-                term,
-                text,
-                flags=re.IGNORECASE
-            )
+            return ""
 
         words = text.split()
         normalized_words = []
 
+        technical_terms = {
+            "python",
+            "sql",
+            "java",
+            "javascript",
+            "power bi",
+            "api",
+            "ai",
+            "ml",
+            "aws",
+            "azure",
+            "docker"
+        }
+
         for word in words:
-            stripped = word.strip(".,!?;:")
+            stripped = word.strip(
+                ".,!?;:"
+            )
 
             if (
                 stripped
                 and stripped.isupper()
                 and len(stripped) > 1
                 and stripped not in {
-                    term.upper() for term in technical_terms
+                    term.upper()
+                    for term in technical_terms
                 }
             ):
                 word = word.lower()
@@ -257,14 +203,16 @@ class SpeechToTextProcessor:
         text = " ".join(normalized_words)
 
         if text:
-            text = text[0].upper() + text[1:]
+            text = (
+                text[0].upper()
+                + text[1:]
+            )
 
-        return text
-
-    @staticmethod
-    def _correct_punctuation(text: str) -> str:
-        text = re.sub(r"\s+([,.!?;:])", r"\1", text)
-        text = re.sub(r"([,.!?;:])([A-Za-z])", r"\1 \2", text)
+        text = re.sub(
+            r"\s+([,.!?;:])",
+            r"\1",
+            text
+        )
 
         if text and text[-1] not in ".!?":
             text += "."
@@ -273,15 +221,17 @@ class SpeechToTextProcessor:
 
     @classmethod
     def is_silence(cls, text: str) -> bool:
-        normalized = text.strip().lower()
-
-        if normalized in cls.SILENCE_MARKERS:
-            return True
-
-        return False
+        return (
+            text.strip().lower()
+            in cls.SILENCE_MARKERS
+        )
 
     @classmethod
-    def contains_interruption_marker(cls, text: str) -> bool:
+    def contains_interruption_marker(
+        cls,
+        text: str
+    ) -> bool:
+
         normalized = text.strip().lower()
 
         return any(
@@ -291,16 +241,17 @@ class SpeechToTextProcessor:
 
 
 class MockSpeechToTextService:
-    """
-    Deterministic STT service used for development and testing.
 
-    This provides a provider-independent integration point without
-    requiring external API credentials.
-    """
+    def transcribe(
+        self,
+        audio_input: str
+    ) -> Dict[str, Any]:
 
-    def transcribe(self, audio_input: str) -> Dict[str, Any]:
         if not isinstance(audio_input, str):
-            raise TypeError("Audio input must be a string for the mock service.")
+            raise TypeError(
+                "Audio input must be a string "
+                "for the mock service."
+            )
 
         if not audio_input.strip():
             return {
@@ -317,20 +268,74 @@ class MockSpeechToTextService:
 
 
 class SpeechToTextIntegration:
-    """Connect an STT provider with the transcript cleaning pipeline."""
+    """
+    Connect an STT provider with transcript processing.
+
+    Includes safe fallback behaviour for provider failures.
+    """
+
+    LOW_CONFIDENCE_THRESHOLD = 0.60
 
     def __init__(self, provider=None):
-        self.provider = provider or MockSpeechToTextService()
+        self.provider = (
+            provider
+            or MockSpeechToTextService()
+        )
         self.processor = SpeechToTextProcessor()
 
-    def transcribe_and_clean(self, audio_input: str) -> Dict[str, Any]:
-        stt_result = self.provider.transcribe(audio_input)
+    def transcribe_and_clean(
+        self,
+        audio_input: str
+    ) -> Dict[str, Any]:
 
-        processed = self.processor.process(
-            stt_result.get("text", ""),
-            stt_result.get("status", "complete")
-        )
+        try:
+            stt_result = self.provider.transcribe(
+                audio_input
+            )
 
-        processed["confidence"] = stt_result.get("confidence", 0.0)
+            confidence = float(
+                stt_result.get(
+                    "confidence",
+                    0.0
+                )
+            )
 
-        return processed
+            status = stt_result.get(
+                "status",
+                "complete"
+            )
+
+            if (
+                status == "complete"
+                and confidence
+                < self.LOW_CONFIDENCE_THRESHOLD
+            ):
+                status = "poor_audio"
+
+            processed = self.processor.process(
+                stt_result.get(
+                    "text",
+                    ""
+                ),
+                status
+            )
+
+            processed["confidence"] = confidence
+
+            return processed
+
+        except Exception as exc:
+
+            return {
+                "text": "",
+                "confidence": 0.0,
+                "status": "stt_error",
+                "is_partial": False,
+                "is_interrupted": False,
+                "is_silence": False,
+                "is_edge_case": True,
+                "requires_retry": True,
+                "requires_clarification": False,
+                "fallback": True,
+                "error": str(exc)
+            }

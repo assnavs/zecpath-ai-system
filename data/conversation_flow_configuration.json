@@ -49,6 +49,22 @@
         "interrupted": {
             "action": "retry",
             "message": "It looks like your response was interrupted. Please continue your answer."
+        },
+        "poor_audio": {
+            "action": "retry",
+            "message": "I couldn't hear your response clearly. Could you please repeat your answer?"
+        },
+        "language_issue": {
+            "action": "clarify",
+            "message": "I may not have understood the language clearly. Could you please answer again?"
+        },
+        "background_noise": {
+            "action": "retry",
+            "message": "There seems to be some background noise. Could you please repeat your answer?"
+        },
+        "stt_error": {
+            "action": "retry",
+            "message": "I couldn't process your response. Could you please try answering again?"
         }
     },
     "retry_policy": {
