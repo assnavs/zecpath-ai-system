@@ -1,0 +1,12 @@
+{
+    "criteria_weights": {
+        "clarity": 0.25,
+        "relevance": 0.3,
+        "completeness": 0.25,
+        "consistency": 0.2
+    },
+    "score_range": {
+        "minimum": 0,
+        "maximum": 10
+    }
+}
