@@ -1,4 +1,5 @@
-﻿import json
+﻿from interview_ai.follow_up_engine import DynamicFollowUpEngine
+import json
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -283,3 +284,5 @@ class InterviewAI:
 
     def get_interview_state(self) -> Dict[str, Any]:
         return dict(self.state)
+
+
