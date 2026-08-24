@@ -1,4 +1,4 @@
-﻿{
+{
   "dataset_name": "HR Screening Question Dataset",
   "version": "1.0",
   "purpose": "AI-ready question bank for automated HR screening calls",
@@ -190,6 +190,64 @@
         "question_id": "SE_NOT_001",
         "category": "Notice Period",
         "question": "What is your notice period and when would you be available to join?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 2
+      }
+    ],
+    "HR Coordinator": [
+      {
+        "question_id": "HR_INT_001",
+        "category": "Introduction",
+        "question": "Please introduce yourself and describe your HR background.",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 1
+      },
+      {
+        "question_id": "HR_EDU_001",
+        "category": "Education",
+        "question": "What is your highest educational qualification and field of study?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "HR_EXP_001",
+        "category": "Experience",
+        "question": "How many years of experience do you have in HR or related work?",
+        "expected_answer_type": "number",
+        "mandatory": true,
+        "scoring_importance": 3
+      },
+      {
+        "question_id": "HR_SKL_001",
+        "category": "Skills",
+        "question": "Which HR, communication, recruitment, and employee management skills are you experienced with?",
+        "expected_answer_type": "text",
+        "mandatory": true,
+        "scoring_importance": 3
+      },
+      {
+        "question_id": "HR_LOC_001",
+        "category": "Location",
+        "question": "Are you comfortable with the required work location or work arrangement?",
+        "expected_answer_type": "multiple_choice",
+        "mandatory": true,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "HR_SAL_001",
+        "category": "Salary",
+        "question": "What are your salary expectations for this role?",
+        "expected_answer_type": "text",
+        "mandatory": false,
+        "scoring_importance": 2
+      },
+      {
+        "question_id": "HR_NOT_001",
+        "category": "Notice Period",
+        "question": "What is your notice period and earliest possible joining date?",
         "expected_answer_type": "text",
         "mandatory": true,
         "scoring_importance": 2
