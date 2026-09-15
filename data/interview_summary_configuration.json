@@ -1,0 +1,49 @@
+﻿{
+    "score_range": {
+        "minimum": 0,
+        "maximum": 100
+    },
+    "thresholds": {
+        "excellent": 80,
+        "good": 65,
+        "moderate": 50
+    },
+    "risk_thresholds": {
+        "low_confidence": 50,
+        "low_communication": 50,
+        "low_aptitude": 50,
+        "high_inconsistency": 40
+    },
+    "strength_thresholds": {
+        "strong_score": 75
+    },
+    "minimum_answers_for_consistency": 2,
+    "cultural_fit_indicators": [
+        "team",
+        "collaborate",
+        "collaboration",
+        "respect",
+        "adapt",
+        "adaptable",
+        "flexible",
+        "learn",
+        "learning",
+        "feedback",
+        "support",
+        "communicate",
+        "communication",
+        "ownership",
+        "responsibility",
+        "inclusive"
+    ],
+    "risk_indicators": [
+        "conflict",
+        "blame",
+        "ignore",
+        "refuse",
+        "unwilling",
+        "dishonest",
+        "avoid",
+        "give up"
+    ]
+}

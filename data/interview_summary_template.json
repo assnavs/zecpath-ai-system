@@ -1,0 +1,28 @@
+﻿{
+    "report_type": "AI Interview Summary Report",
+    "candidate": {
+        "name": "",
+        "role": ""
+    },
+    "summary": {
+        "overall_performance": "",
+        "natural_language_summary": ""
+    },
+    "evaluation": {
+        "interview_score": 0.0,
+        "interview_level": "",
+        "aptitude_score": 0.0,
+        "aptitude_level": "",
+        "communication_score": 0.0,
+        "confidence_score": 0.0,
+        "consistency_score": 0.0
+    },
+    "insights": {
+        "strengths": [],
+        "weaknesses": [],
+        "cultural_fit_indicators": [],
+        "risk_flags": [],
+        "inconsistencies": []
+    },
+    "recommendation": ""
+}

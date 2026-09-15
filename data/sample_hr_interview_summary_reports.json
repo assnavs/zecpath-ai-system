@@ -1,0 +1,87 @@
+{
+    "sample_reports": [
+        {
+            "report_type": "AI Interview Summary Report",
+            "candidate": {
+                "name": "Ananya Menon",
+                "role": "Data Analyst"
+            },
+            "summary": {
+                "overall_performance": "Excellent overall HR performance",
+                "natural_language_summary": "Ananya Menon achieved an HR interview score of 84.00, classified as excellent. The aptitude evaluation score was 86.00. Key strengths include Strong overall HR interview performance, Strong answer relevance, Strong communication skills. No major observable risk indicators were identified."
+            },
+            "evaluation": {
+                "interview_score": 84.0,
+                "interview_level": "excellent",
+                "aptitude_score": 86.0,
+                "aptitude_level": "excellent",
+                "communication_score": 90.0,
+                "confidence_score": 82.0,
+                "consistency_score": 78.0
+            },
+            "insights": {
+                "strengths": [
+                    "Strong overall HR interview performance",
+                    "Strong answer relevance",
+                    "Strong communication skills",
+                    "Strong confidence indicators",
+                    "Strong logical and problem-solving ability"
+                ],
+                "weaknesses": [],
+                "cultural_fit_indicators": [
+                    "team",
+                    "collaborate",
+                    "adapt",
+                    "learn",
+                    "feedback",
+                    "communicate",
+                    "ownership"
+                ],
+                "risk_flags": [],
+                "inconsistencies": []
+            },
+            "recommendation": "Strongly Recommended"
+        },
+        {
+            "report_type": "AI Interview Summary Report",
+            "candidate": {
+                "name": "Rahul Nair",
+                "role": "Business Analyst"
+            },
+            "summary": {
+                "overall_performance": "Moderate overall HR performance",
+                "natural_language_summary": "Rahul Nair achieved an HR interview score of 58.00, classified as moderate. The aptitude evaluation score was 54.00. Areas for improvement include Answer relevance could be improved, Communication could be improved, Confidence could be improved. Recruiters should review the following risk indicators: Low confidence indicators."
+            },
+            "evaluation": {
+                "interview_score": 58.0,
+                "interview_level": "moderate",
+                "aptitude_score": 54.0,
+                "aptitude_level": "moderate",
+                "communication_score": 55.0,
+                "confidence_score": 48.0,
+                "consistency_score": 35.0
+            },
+            "insights": {
+                "strengths": [],
+                "weaknesses": [
+                    "Answer relevance could be improved",
+                    "Communication could be improved",
+                    "Confidence could be improved",
+                    "Consistency could be improved",
+                    "Logical reasoning and problem-solving could be improved"
+                ],
+                "cultural_fit_indicators": [
+                    "support",
+                    "communicate"
+                ],
+                "risk_flags": [
+                    "Low confidence indicators"
+                ],
+                "inconsistencies": [
+                    "Significant inconsistency detected between interview responses"
+                ]
+            },
+            "recommendation": "Consider with Review"
+        }
+    ]
+}
