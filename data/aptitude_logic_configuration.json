@@ -1,0 +1,55 @@
+﻿{
+    "score_range": {
+        "minimum": 0,
+        "maximum": 100
+    },
+    "weights": {
+        "problem_understanding": 0.20,
+        "logical_reasoning": 0.35,
+        "decision_quality": 0.25,
+        "problem_solving_clarity": 0.20
+    },
+    "thresholds": {
+        "excellent": 80,
+        "good": 65,
+        "moderate": 50
+    },
+    "minimum_reasoning_components": 2,
+    "reasoning_indicators": [
+        "because",
+        "therefore",
+        "first",
+        "then",
+        "next",
+        "finally",
+        "analyse",
+        "analyze",
+        "consider",
+        "compare",
+        "evaluate",
+        "prioritize",
+        "identify",
+        "reason",
+        "reasoning",
+        "cause",
+        "impact",
+        "option",
+        "alternative"
+    ],
+    "problem_solving_indicators": [
+        "solution",
+        "solve",
+        "plan",
+        "approach",
+        "steps",
+        "action",
+        "implement",
+        "resolve",
+        "improve",
+        "monitor",
+        "communicate",
+        "escalate",
+        "test",
+        "verify"
+    ]
+}
