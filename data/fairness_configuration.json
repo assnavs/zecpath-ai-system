@@ -14,7 +14,16 @@
         "gender",
         "marital_status",
         "nationality",
-        "religion"
+        "religion",
+        "race",
+        "ethnicity",
+        "age",
+        "disability",
+        "sexual_orientation",
+        "gender_identity",
+        "pronouns",
+        "place_of_birth",
+        "postal_code"
     ],
     "bias_thresholds": {
         "high_keyword_dependency": 0.60,
