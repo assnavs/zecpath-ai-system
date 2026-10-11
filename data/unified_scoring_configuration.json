@@ -1,0 +1,44 @@
+﻿{
+    "score_range": {
+        "minimum": 0,
+        "maximum": 100
+    },
+    "missing_score_policy": "renormalize_available_weights",
+    "default_weights": {
+        "ats": 0.35,
+        "screening": 0.25,
+        "hr_interview": 0.40
+    },
+    "role_weights": {
+        "Data Scientist": {
+            "ats": 0.40,
+            "screening": 0.20,
+            "hr_interview": 0.40
+        },
+        "Data Analyst": {
+            "ats": 0.35,
+            "screening": 0.25,
+            "hr_interview": 0.40
+        },
+        "Business Analyst": {
+            "ats": 0.30,
+            "screening": 0.30,
+            "hr_interview": 0.40
+        },
+        "Frontend Developer": {
+            "ats": 0.40,
+            "screening": 0.25,
+            "hr_interview": 0.35
+        },
+        "Backend Developer": {
+            "ats": 0.40,
+            "screening": 0.25,
+            "hr_interview": 0.35
+        }
+    },
+    "thresholds": {
+        "excellent": 80,
+        "good": 65,
+        "moderate": 50
+    }
+}

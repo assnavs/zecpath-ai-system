@@ -1,0 +1,29 @@
+{
+    "candidate_id": "SAMPLE-001",
+    "job_role": "Data Analyst",
+    "round_scores": {
+        "ats": 85.0,
+        "screening": 80.0,
+        "hr_interview": 90.0
+    },
+    "missing_rounds": [],
+    "configured_role_weights": {
+        "ats": 0.35,
+        "screening": 0.25,
+        "hr_interview": 0.4
+    },
+    "applied_weights": {
+        "ats": 0.35,
+        "screening": 0.25,
+        "hr_interview": 0.4
+    },
+    "unified_score": 85.75,
+    "hiring_fit_percentage": 85.75,
+    "classification": "excellent",
+    "score_range": {
+        "minimum": 0.0,
+        "maximum": 100.0
+    },
+    "weighting_note": "All configured evaluation rounds were included.",
+    "decision_note": "This score supports candidate review; it is not an automatic hiring decision."
+}
