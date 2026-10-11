@@ -202,6 +202,15 @@ class HRInterviewScoringEngine:
                 "Interview answer must be a string."
             )
 
+        # Score normalized transcript text consistently.
+        answer = re.sub(r"\s+", " ", answer).strip()
+        if previous_answer is not None:
+            previous_answer = re.sub(
+                r"\s+",
+                " ",
+                previous_answer,
+            ).strip()
+
         communication_result = (
             self.communication_engine.analyze_response(
                 answer

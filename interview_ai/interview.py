@@ -1,5 +1,6 @@
 ﻿from interview_ai.follow_up_engine import DynamicFollowUpEngine
 import json
+import re
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -230,7 +231,12 @@ class InterviewAI:
                 "Candidate response must be a string."
             )
 
-        cleaned_response = response.strip()
+        # Normalize repeated spaces and line breaks in transcripts.
+        cleaned_response = re.sub(
+            r"\s+",
+            " ",
+            response,
+        ).strip()
 
         self.state["response"] = cleaned_response
         self.state["response_received"] = bool(

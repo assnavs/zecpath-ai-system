@@ -163,6 +163,13 @@ class DynamicFollowUpEngine:
             question_id,
         )
 
+        # Keep eligibility consistent with the actual action.
+        # A suppressed duplicate prompt is not an available follow-up.
+        if eligible and trigger is not None and follow_up is None:
+            eligible = False
+            trigger = None
+            reason = "duplicate_follow_up_suppressed"
+
         if eligible and follow_up:
             self.state["follow_up_count"] += 1
             self.state["asked_follow_ups"].append(
