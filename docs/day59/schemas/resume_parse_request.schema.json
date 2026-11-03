@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ResumeParseRequest",
+  "type": "object",
+  "required": [
+    "resume_id",
+    "filename",
+    "content_reference"
+  ],
+  "properties": {
+    "resume_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "filename": {
+      "type": "string",
+      "minLength": 1
+    },
+    "content_reference": {
+      "type": "string",
+      "description": "Opaque secured storage reference; do not embed raw resume bytes in API JSON"
+    },
+    "correlation_id": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

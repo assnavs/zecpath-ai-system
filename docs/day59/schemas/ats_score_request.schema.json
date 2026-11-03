@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ATSScoreRequest",
+  "type": "object",
+  "required": [
+    "candidate_id",
+    "job_role",
+    "scores"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "job_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scores": {
+      "type": "object",
+      "required": [
+        "skill_match",
+        "experience_relevance",
+        "education_alignment",
+        "semantic_similarity"
+      ],
+      "properties": {
+        "skill_match": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "experience_relevance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "education_alignment": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "semantic_similarity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "additionalProperties": false
+    },
+    "correlation_id": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

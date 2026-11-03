@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DecisionResponse",
+  "type": "object",
+  "required": [
+    "success",
+    "data"
+  ],
+  "properties": {
+    "success": {
+      "const": true
+    },
+    "data": {
+      "type": "object",
+      "required": [
+        "candidate_id",
+        "recommendation",
+        "human_review_required"
+      ],
+      "properties": {
+        "candidate_id": {
+          "type": "string"
+        },
+        "recommendation": {
+          "enum": [
+            "Selected",
+            "Hold / Review",
+            "Rejected"
+          ]
+        },
+        "hiring_fit_score": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "human_review_required": {
+          "const": true
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}
