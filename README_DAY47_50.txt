@@ -1,0 +1,1 @@
+Extract into the zecpath-ai-system repository root, preserving folders.\nRun focused tests then full suite:\npython -m pytest tests/test_day47_technical_skill_scoring_engine.py tests/test_day48_behavioral_signal_framework.py tests/test_day49_integrity_detection_engine.py tests/test_day50_machine_test_engine.py -q\npython -m pytest -q\n
