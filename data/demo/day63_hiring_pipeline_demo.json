@@ -1,0 +1,257 @@
+{
+  "dataset_name": "Zecpath Synthetic Hiring Pipeline Demo",
+  "dataset_version": "1.0",
+  "synthetic_data": true,
+  "privacy_note": "All candidate names, identifiers, histories and responses are fictional. Do not treat as real applicant records.",
+  "job_descriptions": [
+    {
+      "job_id": "JOB-DS-01",
+      "role": "Data Scientist",
+      "title": "Junior Data Scientist",
+      "required_skills": [
+        "Python",
+        "SQL",
+        "statistics",
+        "machine learning"
+      ],
+      "preferred_skills": [
+        "Power BI",
+        "Pandas"
+      ],
+      "experience_years": "0-2",
+      "responsibilities": [
+        "clean and analyze data",
+        "build baseline models",
+        "communicate findings"
+      ]
+    },
+    {
+      "job_id": "JOB-BA-01",
+      "role": "Business Analyst",
+      "title": "Associate Business Analyst",
+      "required_skills": [
+        "Excel",
+        "SQL",
+        "requirements analysis",
+        "communication"
+      ],
+      "preferred_skills": [
+        "Power BI",
+        "process mapping"
+      ],
+      "experience_years": "0-2",
+      "responsibilities": [
+        "document requirements",
+        "analyze operational data",
+        "prepare stakeholder reports"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "DEMO-001",
+      "name": "Maya Thomas",
+      "profile_quality": "strong",
+      "role": "Data Scientist",
+      "resume_text": "Maya Thomas | Junior Data Scientist. BSc Statistics. Two years of project experience with Python, SQL, pandas, exploratory data analysis and baseline machine learning. Built a churn analysis project and communicated findings through Power BI dashboards.",
+      "ats_inputs": {
+        "skill_match": 91,
+        "experience_relevance": 82,
+        "education_alignment": 88,
+        "semantic_similarity": 90
+      },
+      "screening_responses": [
+        {
+          "question_id": "Q1",
+          "clarity": 9,
+          "relevance": 9,
+          "completeness": 8,
+          "consistency": 9
+        },
+        {
+          "question_id": "Q2",
+          "clarity": 8,
+          "relevance": 9,
+          "completeness": 9,
+          "consistency": 8
+        }
+      ],
+      "hr_answers": [
+        {
+          "answer": "I worked with a small team to clean customer data, agree on definitions, and explain the churn findings to stakeholders. I documented assumptions and asked for review when the data was incomplete.",
+          "expected_keywords": [
+            "team",
+            "data",
+            "stakeholders",
+            "document"
+          ]
+        },
+        {
+          "answer": "When I found missing values, I checked the source and compared options before selecting a documented treatment.",
+          "expected_keywords": [
+            "missing",
+            "source",
+            "documented"
+          ]
+        }
+      ],
+      "technical_responses": [
+        {
+          "answer": "First I would inspect the data types and missing values, then create a baseline model. I would compare precision and recall, validate on held-out data, and monitor drift after deployment.",
+          "question_type": "scenario",
+          "difficulty": "intermediate",
+          "expected_concepts": [
+            "data",
+            "model",
+            "precision",
+            "recall"
+          ]
+        }
+      ],
+      "machine_submissions": [
+        {
+          "task": {
+            "task_id": "DS-T1",
+            "task_type": "coding",
+            "time_limit_seconds": 900
+          },
+          "submission": {
+            "time_used_seconds": 600,
+            "tests_passed": 9,
+            "tests_total": 10,
+            "code_quality_score": 82,
+            "problem_solving_approach_score": 85
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "DEMO-002",
+      "name": "Arjun Nair",
+      "profile_quality": "mixed",
+      "role": "Data Scientist",
+      "resume_text": "Arjun Nair | Graduate. Python basics, Excel and academic statistics coursework. Completed one small data cleaning assignment. Limited evidence of deployed or end-to-end machine learning projects.",
+      "ats_inputs": {
+        "skill_match": 58,
+        "experience_relevance": 45,
+        "education_alignment": 72,
+        "semantic_similarity": 52
+      },
+      "screening_responses": [
+        {
+          "question_id": "Q1",
+          "clarity": 6,
+          "relevance": 6,
+          "completeness": 5,
+          "consistency": 7
+        }
+      ],
+      "hr_answers": [
+        {
+          "answer": "I completed a college assignment with two classmates. We divided the data cleaning tasks and presented the result to our faculty guide.",
+          "expected_keywords": [
+            "assignment",
+            "team",
+            "data",
+            "presented"
+          ]
+        }
+      ],
+      "technical_responses": [
+        {
+          "answer": "I would remove missing values and train a model. I need to learn more about validation and model evaluation.",
+          "question_type": "conceptual",
+          "difficulty": "basic",
+          "expected_concepts": [
+            "missing",
+            "model",
+            "validation"
+          ]
+        }
+      ],
+      "machine_submissions": [
+        {
+          "task": {
+            "task_id": "DS-T2",
+            "task_type": "file_based",
+            "time_limit_seconds": 900
+          },
+          "submission": {
+            "time_used_seconds": 850,
+            "tests_passed": 5,
+            "tests_total": 10,
+            "code_quality_score": 55,
+            "problem_solving_approach_score": 60
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "DEMO-003",
+      "name": "Nila Varghese",
+      "profile_quality": "early_career",
+      "role": "Business Analyst",
+      "resume_text": "Nila Varghese | BCom graduate. Internship exposure to Excel reporting, meeting notes, customer support coordination and basic SQL practice. Interested in requirements gathering and process improvement.",
+      "ats_inputs": {
+        "skill_match": 76,
+        "experience_relevance": 68,
+        "education_alignment": 80,
+        "semantic_similarity": 74
+      },
+      "screening_responses": [
+        {
+          "question_id": "Q1",
+          "clarity": 8,
+          "relevance": 8,
+          "completeness": 7,
+          "consistency": 8
+        }
+      ],
+      "hr_answers": [
+        {
+          "answer": "I prepare clear meeting notes, confirm action owners, and follow up with the team when a requirement is unclear. I try to communicate changes early.",
+          "expected_keywords": [
+            "meeting",
+            "team",
+            "communicate",
+            "requirement"
+          ]
+        }
+      ],
+      "technical_responses": [
+        {
+          "answer": "I would first clarify the business question, check the source data with SQL, then summarize the findings in Excel and confirm the result with the stakeholder.",
+          "question_type": "scenario",
+          "difficulty": "basic",
+          "expected_concepts": [
+            "business",
+            "data",
+            "SQL",
+            "stakeholder"
+          ]
+        }
+      ],
+      "machine_submissions": [
+        {
+          "task": {
+            "task_id": "BA-T1",
+            "task_type": "mini_system_design",
+            "time_limit_seconds": 600
+          },
+          "submission": {
+            "time_used_seconds": 420,
+            "tests_passed": 7,
+            "tests_total": 10,
+            "code_quality_score": 72,
+            "problem_solving_approach_score": 78
+          }
+        }
+      ]
+    }
+  ],
+  "interpretation_guidance": [
+    "The profile_quality label describes the synthetic example narrative, not a ground-truth hiring label.",
+    "Scoring engines are transparent baselines; compare outputs with a trained reviewer and representative labelled validation data.",
+    "No single score or automated recommendation should be used as a standalone hiring decision."
+  ]
+}
