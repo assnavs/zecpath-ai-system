@@ -1,81 +1,76 @@
 # Zecpath AI System
 
-## Overview
+A modular Python recruitment workflow and decision-support prototype developed during the Data Science Engineer Internship at **Zecser Business LLP**.
 
-This repository contains the initial development environment and modular project structure for an AI-based recruitment platform. The project is organized to support scalable development using independent modules for parsing, scoring, screening, interviews, utilities, testing, and documentation.
+> **Important scope note:** This repository is an internship prototype. It is not a validated autonomous hiring system. Scores and recommendations are advisory signals; an authorized human reviewer must make every hiring decision.
 
-> **Note:** This repository contains only the development environment, project structure, and placeholder modules. It does not include any confidential business logic, proprietary algorithms, or internal project documentation.
+## Workflow
 
----
+Resume parsing and normalization → ATS scoring → screening → HR interview → technical interview → machine-test evaluation → cross-round aggregation → recommendation → recruiter report → human review.
 
-## Project Structure
+## Repository layout
 
-```
-zecpath-ai-system/
-│
-├── ats_engine/
-├── data/
-├── docs/
-├── interview_ai/
-├── logs/
-├── parsers/
-├── scoring/
-├── screening_ai/
-├── tests/
-├── utils/
-│
-├── main.py
-├── requirements.txt
-├── README.md
-└── .gitignore
+```text
+ats_engine/       FastAPI endpoints and ATS API
+parsers/          Resume and job-description parsing/normalization
+screening_ai/     Screening flow, intent, shortlisting and reports
+interview_ai/     Interview, technical task and recommendation modules
+scoring/          Scoring, aggregation and evaluation engines
+utils/            Simulation, validation, observability and report utilities
+data/             Configuration, examples and synthetic demo inputs
+tests/            Automated tests
+docs/             Day-wise technical documentation and handover material
+scripts/          Repeatable demonstration scripts
 ```
 
----
+## Requirements and setup (Windows PowerShell)
 
-## Technologies Used
+Use Python 3.11 as the tested project environment.
 
-- Python
-- Git
-- Virtual Environment (venv)
-- FastAPI
-- Flask
-- Pandas
-- NumPy
-- Scikit-learn
-- Pytest
-
----
-
-## Setup Instructions
-
-### Create Virtual Environment
-
-```bash
-python -m venv .venv
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m pytest -v
 ```
 
-### Activate Environment (Windows)
+## Run the synthetic final demo
 
-```bash
-.\.venv\Scripts\activate
+From the repository root:
+
+```powershell
+python scripts/run_final_demo.py
 ```
 
-### Install Dependencies
+The demo uses synthetic candidate records from `data/demo/day63_hiring_pipeline_demo.json`. It passes structured inputs to the deterministic simulator. It does not demonstrate a production upload-to-parser integration, production model serving, or execution of candidate-submitted code.
 
-```bash
-pip install -r requirements.txt
+## Key implementation notes
+
+- Aggregation uses role-specific configured weights and renormalizes over available rounds.
+- Coverage is reported separately so missing stages remain visible.
+- Recommendation thresholds are configurable in the recommendation engine.
+- Recommendation confidence is a coverage-based heuristic, not a statistical probability.
+- The machine-test component evaluates supplied test outcomes and rubric values; it does not execute untrusted code.
+- API resume/job stores are in-memory demonstration stores, not durable production storage.
+- Observability and audit utilities are in-process foundations.
+
+## Testing
+
+```powershell
+python -m pytest -v
 ```
 
----
+The full suite requires all packages in `requirements.txt`, including `sentence-transformers`. Review warnings and environment-specific collection errors rather than treating an incomplete run as a full pass.
 
-## Project Status
+## Documentation
 
-Initial project environment and repository setup completed.
+- `docs/day66/` — demo script and architecture diagrams
+- `docs/day67/` — mock demo feedback and stakeholder Q&A
+- `docs/day68/` — final validation and bug-fix report
+- `docs/day69/` — AI roadmap and internship portfolio
+- `docs/day70/` — final demo and handover guide
+- Earlier day-wise documentation remains under `docs/day*/`.
 
----
+## Responsible use
 
-## Author
-
-**Assna V S**
-
-Data Science Engineer (Intern)
+Do not use real applicant data in public demonstrations. Before any real-world pilot, complete privacy, security, fairness, accessibility, legal, model evaluation and operational reviews. Keep a human reviewer accountable for final decisions.

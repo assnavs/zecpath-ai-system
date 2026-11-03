@@ -1,0 +1,11 @@
+flowchart TD
+    A[Resume received] --> B[Resume parsing and normalization]
+    B --> C[ATS scoring]
+    C --> D[Screening evaluation]
+    D --> E[HR interview evaluation]
+    E --> F[Technical interview evaluation]
+    F --> G[Machine test evaluation]
+    G --> H[Cross-round weighted aggregation]
+    H --> I[Explainable recommendation]
+    I --> J[Recruiter report]
+    J --> K[Authorized human review and final decision]

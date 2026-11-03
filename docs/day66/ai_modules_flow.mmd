@@ -1,0 +1,10 @@
+flowchart LR
+    P[parsers] --> ATS[scoring.ats_scoring_engine]
+    ATS --> SCR[scoring.screening_scoring_engine]
+    SCR --> HR[scoring.hr_interview_scoring_engine]
+    HR --> TECH[scoring.technical_skill_scoring_engine]
+    TECH --> MT[interview_ai.machine_test_engine]
+    MT --> AGG[scoring.cross_round_aggregation_engine]
+    AGG --> REC[interview_ai.final_recommendation_engine]
+    REC --> RPT[utils.recruiter_report_formatter]
+    OBS[utils.ai_observability] -. operational metadata .-> RPT
