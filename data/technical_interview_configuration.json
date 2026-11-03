@@ -1,0 +1,88 @@
+﻿{
+  "experience_levels": {
+    "entry": {"label": "0-2 years", "min_years": 0, "max_years": 2},
+    "intermediate": {"label": "3-5 years", "min_years": 3, "max_years": 5},
+    "advanced": {"label": "5+ years", "min_years": 5, "max_years": null}
+  },
+  "experience_priority": ["advanced", "intermediate", "entry"],
+  "difficulty_progression": ["basic", "intermediate", "advanced"],
+  "interview_sections": [
+    "introduction",
+    "experience_based",
+    "conceptual",
+    "scenario_based"
+  ],
+  "roles": {
+    "MERN Developer": {
+      "skills": ["MongoDB", "Express.js", "React", "Node.js", "JavaScript"],
+      "questions": {
+        "entry": [
+          {"section": "conceptual", "skill": "JavaScript", "difficulty": "basic", "question": "Explain the difference between var, let and const."},
+          {"section": "conceptual", "skill": "React", "difficulty": "basic", "question": "What are React components and props?"},
+          {"section": "scenario_based", "skill": "MongoDB", "difficulty": "basic", "question": "How would you store user details in MongoDB?"}
+        ],
+        "intermediate": [
+          {"section": "experience_based", "skill": "Node.js", "difficulty": "intermediate", "question": "Describe how you built and structured a REST API using Node.js."},
+          {"section": "conceptual", "skill": "React", "difficulty": "intermediate", "question": "Explain React state management and component lifecycle."},
+          {"section": "scenario_based", "skill": "Express.js", "difficulty": "intermediate", "question": "How would you handle authentication and authorization in an Express application?"}
+        ],
+        "advanced": [
+          {"section": "conceptual", "skill": "Node.js", "difficulty": "advanced", "question": "Explain how Node.js handles concurrency and asynchronous workloads."},
+          {"section": "scenario_based", "skill": "MERN Stack", "difficulty": "advanced", "question": "Design a scalable MERN application for a large number of concurrent users."},
+          {"section": "experience_based", "skill": "MongoDB", "difficulty": "advanced", "question": "Describe how you optimized database performance in a production application."}
+        ]
+      }
+    },
+    "Java Developer": {
+      "skills": ["Java", "OOP", "Spring Boot", "SQL", "REST APIs"],
+      "questions": {
+        "entry": [
+          {"section": "conceptual", "skill": "Java", "difficulty": "basic", "question": "Explain the main features of Java."},
+          {"section": "conceptual", "skill": "OOP", "difficulty": "basic", "question": "Explain inheritance, encapsulation, polymorphism and abstraction."},
+          {"section": "scenario_based", "skill": "SQL", "difficulty": "basic", "question": "How would you retrieve records matching a condition from a relational database?"}
+        ],
+        "intermediate": [
+          {"section": "experience_based", "skill": "Java", "difficulty": "intermediate", "question": "Describe how you used Java collections in a project."},
+          {"section": "conceptual", "skill": "Spring Boot", "difficulty": "intermediate", "question": "Explain dependency injection in Spring Boot."},
+          {"section": "scenario_based", "skill": "REST APIs", "difficulty": "intermediate", "question": "How would you design error handling for a REST API?"}
+        ],
+        "advanced": [
+          {"section": "conceptual", "skill": "Java", "difficulty": "advanced", "question": "Explain Java concurrency and thread synchronization."},
+          {"section": "scenario_based", "skill": "Spring Boot", "difficulty": "advanced", "question": "Design a scalable Spring Boot service handling high request volumes."},
+          {"section": "experience_based", "skill": "SQL", "difficulty": "advanced", "question": "Describe how you diagnose and optimize slow database queries."}
+        ]
+      }
+    },
+    "DevOps Engineer": {
+      "skills": ["Linux", "Docker", "Kubernetes", "CI/CD", "AWS", "Monitoring"],
+      "questions": {
+        "entry": [
+          {"section": "conceptual", "skill": "Linux", "difficulty": "basic", "question": "Explain common Linux commands used to inspect files and processes."},
+          {"section": "conceptual", "skill": "Docker", "difficulty": "basic", "question": "What is a Docker image and how is it different from a container?"},
+          {"section": "scenario_based", "skill": "CI/CD", "difficulty": "basic", "question": "Why is automated testing useful in a deployment pipeline?"}
+        ],
+        "intermediate": [
+          {"section": "experience_based", "skill": "Docker", "difficulty": "intermediate", "question": "Describe how you containerized an application."},
+          {"section": "conceptual", "skill": "Kubernetes", "difficulty": "intermediate", "question": "Explain the role of Pods and Deployments in Kubernetes."},
+          {"section": "scenario_based", "skill": "CI/CD", "difficulty": "intermediate", "question": "How would you investigate a failed deployment pipeline?"}
+        ],
+        "advanced": [
+          {"section": "scenario_based", "skill": "Kubernetes", "difficulty": "advanced", "question": "Design a highly available Kubernetes deployment."},
+          {"section": "conceptual", "skill": "AWS", "difficulty": "advanced", "question": "Explain how you would design a resilient cloud infrastructure."},
+          {"section": "experience_based", "skill": "Monitoring", "difficulty": "advanced", "question": "Describe how you designed monitoring and incident response for production services."}
+        ]
+      }
+    }
+  },
+  "flow": {
+    "initial_state": "introduction",
+    "transitions": {
+      "introduction": "experience_based",
+      "experience_based": "conceptual",
+      "conceptual": "scenario_based",
+      "scenario_based": "evaluation",
+      "evaluation": "closing",
+      "closing": "completed"
+    }
+  }
+}
